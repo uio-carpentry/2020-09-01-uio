@@ -4,9 +4,16 @@
 {% endunless %}
 
 {% include install_instructions/shell.html %}
+
+{% comment %}
+Assuming Git is not used in this workshop, the line below is commented out
 {% include install_instructions/git.html %}
+{% endcomment %}
+
 {% include install_instructions/editor.html %}
 
+{% comment %}
+Assuming R or Python is not used in this workshop, the lines below are commented out
 {% if site.flavor == "r" %}
 {% include install_instructions/r.html %}
 {% elsif site.flavor == "python" %}
@@ -17,6 +24,7 @@
 {% else %}
 {% include warning-flavor.html %}
 {% endif %}
+{% endcomment %}
 
 {% comment %}
 The following setup instructions are commented out because Carpentries workshops
